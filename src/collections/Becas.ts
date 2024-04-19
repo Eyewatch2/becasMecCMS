@@ -56,6 +56,7 @@ const Becas: CollectionConfig = {
         {
             name: 'tipo',
             label: 'Tipo de Beca',
+            required: true, // Campo obligatorio
             type: 'select', // Cambiado a campo de selección
             options: [ // Opciones predefinidas para el tipo de beca
                 { value: 'Apoyo Económico', label: 'Apoyo Económico' },
