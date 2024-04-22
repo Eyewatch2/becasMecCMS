@@ -18,7 +18,6 @@ const Becas: CollectionConfig = {
     slug: 'becas',
     admin: {
         useAsTitle: 'nombre', // Utiliza el campo 'nombre' como título en el CMS
-
     },
     access: {
         read: () => true,
@@ -84,6 +83,7 @@ const Becas: CollectionConfig = {
             relationTo: 'nivelesEducativos', // Slug de la colección relacionada
             hasMany: true, // Si puede tener múltiples relaciones
             admin: {
+                isSortable: true, // Si quieres que sea ordenable en el panel de administración
                 allowCreate: true, // Si permites la creación de nuevos documentos desde el campo de relación
                 sortOptions: 'label', // Opciones de clasificación predeterminadas para el campo de relación
             },

@@ -12,6 +12,7 @@ const NivelesEducativos: CollectionConfig = {
         update: ({ req }) => Boolean(req.user),
         delete: ({ req }) => Boolean(req.user),
     },
+    
     fields: [
         {
             name: 'value',
