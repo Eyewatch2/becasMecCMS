@@ -85,7 +85,7 @@ const Becas: CollectionConfig = {
                 { value: 'Doctorado', label: 'Doctorado' },
                 { value: 'Educación Media Superior', label: 'Educación Media Superior' },
                 { value: 'Bachillerato', label: 'Bachillerato' },
-                { value: 'Posgrado', label: 'Material de estudio' },
+                { value: 'Posgrado', label: 'Postgrado' },
                 { value: 'Universitario', label: 'Universitario' },
                 { value: 'Educación Media Básica', label: 'Educación Media Básica' },
                 { value: 'Maestría', label: 'Maestría' },
