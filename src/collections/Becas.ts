@@ -1,4 +1,6 @@
 import { CollectionConfig, Option } from 'payload/types'
+import opcionesNivelEducativo from './NivelesEducativos'
+
 
 const departamentosUruguay = ['Montevideo',
     'Artigas', 'Canelones', 'Cerro Largo', 'Colonia', 'Durazno',
@@ -77,19 +79,14 @@ const Becas: CollectionConfig = {
         },
         {
             name: 'nivel_educativo',
-            label: 'Nivel Educativo (dejar en blanco si aplica para todos)',
-            type: 'select', // Podría ser un campo de selección múltiple si se definen opciones predefinidas
-            hasMany: true, // Puede tener varios niveles educativos
-            options: [ // Opciones predefinidas para el tipo de beca
-                { value: 'Terciario', label: 'Terciario' },
-                { value: 'Doctorado', label: 'Doctorado' },
-                { value: 'Educación Media Superior', label: 'Educación Media Superior' },
-                { value: 'Bachillerato', label: 'Bachillerato' },
-                { value: 'Posgrado', label: 'Postgrado' },
-                { value: 'Universitario', label: 'Universitario' },
-                { value: 'Educación Media Básica', label: 'Educación Media Básica' },
-                { value: 'Maestría', label: 'Maestría' },
-            ],
+            label: 'Nivel Educativo',
+            type: 'relationship',
+            relationTo: 'nivelesEducativos', // Slug de la colección relacionada
+            hasMany: true, // Si puede tener múltiples relaciones
+            admin: {
+                allowCreate: true, // Si permites la creación de nuevos documentos desde el campo de relación
+                sortOptions: 'label', // Opciones de clasificación predeterminadas para el campo de relación
+            },
         },
         {
             name: 'edad_min',

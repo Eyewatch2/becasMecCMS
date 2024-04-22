@@ -8,6 +8,7 @@ import { buildConfig } from 'payload/config'
 
 import Users from './collections/Users'
 import Becas from './collections/Becas'
+import NivelesEducativos from './collections/NivelesEducativos'
 
 export default buildConfig({
   admin: {
@@ -16,7 +17,7 @@ export default buildConfig({
   },
   cors: "*",
   editor: slateEditor({}),
-  collections: [Users, Becas],
+  collections: [Users, Becas, NivelesEducativos],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },
