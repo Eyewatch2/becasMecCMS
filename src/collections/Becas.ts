@@ -31,7 +31,6 @@ const Becas: CollectionConfig = {
             name: 'nombre',
             label: 'Nombre',
             type: 'text',
-            required: true, // Campo obligatorio
         },
         {
             name: 'mostrar',
@@ -40,24 +39,20 @@ const Becas: CollectionConfig = {
                 position: 'sidebar', // Coloca el campo en la barra lateral
             },
             type: 'checkbox', // Campo de tipo booleano para mostrar/ocultar
-            defaultValue: true, // Valor predeterminado para mostrar la beca
         },
         {
             name: 'link',
             label: 'Enlace',
             type: 'text',
-            required: true, // Campo obligatorio
         },
         {
             name: 'institucion',
             label: 'Institución',
             type: 'text',
-            required: true, // Campo obligatorio
         },
         {
             name: 'tipo',
             label: 'Tipo de Beca',
-            required: true, // Campo obligatorio
             type: 'select', // Cambiado a campo de selección
             options: [ // Opciones predefinidas para el tipo de beca
                 { value: 'Apoyo Económico', label: 'Apoyo Económico' },
@@ -83,7 +78,6 @@ const Becas: CollectionConfig = {
             relationTo: 'nivelesEducativos', // Slug de la colección relacionada
             hasMany: true, // Si puede tener múltiples relaciones
             admin: {
-                isSortable: true, // Si quieres que sea ordenable en el panel de administración
                 allowCreate: true, // Si permites la creación de nuevos documentos desde el campo de relación
                 sortOptions: 'label', // Opciones de clasificación predeterminadas para el campo de relación
             },
