@@ -105,6 +105,11 @@ const Becas: CollectionConfig = {
             label: 'Fin del período de postulación',
             type: 'date', // Puedes cambiar el tipo según tus necesidades
         },
+        {
+            name: 'observaciones',
+            label: 'Detalles/Observaciones',
+            type: 'textarea',
+        },
     ],
 }
 
