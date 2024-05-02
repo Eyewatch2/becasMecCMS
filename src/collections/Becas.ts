@@ -31,6 +31,7 @@ const Becas: CollectionConfig = {
             name: 'nombre',
             label: 'Nombre',
             type: 'text',
+            required: true
         },
         {
             name: 'mostrar',
@@ -46,6 +47,7 @@ const Becas: CollectionConfig = {
             name: 'institucion',
             label: 'Institución',
             type: 'text',
+            required: true
         },
         {
             name: 'link',
