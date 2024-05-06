@@ -1,5 +1,4 @@
 import { CollectionConfig, Option } from 'payload/types'
-import opcionesNivelEducativo from './NivelesEducativos'
 
 
 const departamentosUruguay = ['Montevideo',

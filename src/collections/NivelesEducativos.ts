@@ -26,6 +26,15 @@ const NivelesEducativos: CollectionConfig = {
             type: 'text',
             required: true, // Campo obligatorio
         },
+        {
+            name: "order",
+            label: "Order",
+            type: "number",
+            admin: {
+                position: "sidebar"
+            }
+        }
+        
     ],
 }
 
