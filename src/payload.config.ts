@@ -11,6 +11,7 @@ import Becas from './collections/Becas'
 import NivelesEducativos from './collections/NivelesEducativos'
 import Config from './collections/Config'
 import Media from './collections/Media'
+import Noticias from './collections/Noticias'
 
 export default buildConfig({
   admin: {
@@ -19,7 +20,7 @@ export default buildConfig({
   },
   cors: "*",
   editor: slateEditor({}),
-  collections: [Users, Becas, NivelesEducativos, Config, Media],
+  collections: [Users, Becas, Noticias, NivelesEducativos, Config, Media],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },

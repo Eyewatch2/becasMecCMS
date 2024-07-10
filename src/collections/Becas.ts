@@ -34,7 +34,7 @@ const Becas: CollectionConfig = {
         },
         {
             name: 'mostrar',
-            label: 'Mostrar/Ocultar Beca',
+            label: 'Mostrar Beca',
             required: true,
             admin: {
                 position: 'sidebar', // Coloca el campo en la barra lateral
