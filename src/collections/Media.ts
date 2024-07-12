@@ -9,7 +9,7 @@ const Media: CollectionConfig = {
     staticURL: "/media",
     staticDir: "media",
     adminThumbnail: "thumbnail",
-    mimeTypes: ["application/pdf", "image/jpeg", "image/png"],
+    mimeTypes: ["image/*"],
   },
   fields: [
     {
