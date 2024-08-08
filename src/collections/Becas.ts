@@ -56,7 +56,6 @@ const Becas: CollectionConfig = {
       },
       type: "checkbox", // Campo de tipo booleano para mostrar/ocultar
     },
-
     {
       name: "institucion",
       label: "Institución",
@@ -72,22 +71,18 @@ const Becas: CollectionConfig = {
       name: "tipo",
       label: "Tipo de Beca",
       required: true,
-      type: "select", // Cambiado a campo de selección
-      options: [
-        // Opciones predefinidas para el tipo de beca
-        { value: "Apoyo Económico", label: "Apoyo Económico" },
-        { value: "Transporte", label: "Transporte" },
-        { value: "Alimentación", label: "Alimentación" },
-        { value: "Alojamiento", label: "Alojamiento" },
-        { value: "Material de estudio", label: "Material de estudio" },
-        { value: "Otros", label: "Otros" },
-      ],
+      type: "relationship", // Cambiado a campo de relación
+      relationTo: "tiposBeca", // Relaciona con la colección de tiposBeca
+      hasMany: true,
+      admin: {
+        allowCreate: true, // Permite crear nuevos tipos desde este campo
+        sortOptions: "label", // Opciones de clasificación para el campo de relación
+      },
     },
-
     {
       name: "departamento",
       label: "Departamento (dejar en blanco si es nacional)",
-      type: "select", // Cambiado a campo de selección
+      type: "select",
       hasMany: true, // Puede tener varios departamentos
       options: optionsDepartamentos as Option[],
     },
@@ -95,32 +90,32 @@ const Becas: CollectionConfig = {
       name: "nivel_educativo",
       label: "Nivel Educativo (dejar en blanco si es para todos)",
       type: "relationship",
-      relationTo: "nivelesEducativos", // Slug de la colección relacionada
-      hasMany: true, // Si puede tener múltiples relaciones
+      relationTo: "nivelesEducativos",
+      hasMany: true, // Puede tener múltiples relaciones
       admin: {
-        allowCreate: true, // Si permites la creación de nuevos documentos desde el campo de relación
-        sortOptions: "label", // Opciones de clasificación predeterminadas para el campo de relación
+        allowCreate: true,
+        sortOptions: "label",
       },
     },
     {
       name: "edad_min",
       label: "Edad Mínima",
-      type: "number", // Campo de tipo número para la edad mínima
+      type: "number",
     },
     {
       name: "edad_max",
       label: "Edad Máxima",
-      type: "number", // Campo de tipo número para la edad máxima
+      type: "number",
     },
     {
       name: "inicio_postulacion",
       label: "Inicio del período de postulación",
-      type: "date", // Puedes cambiar el tipo según tus necesidades
+      type: "date",
     },
     {
       name: "fin_postulacion",
       label: "Fin del período de postulación",
-      type: "date", // Puedes cambiar el tipo según tus necesidades
+      type: "date",
     },
     {
       name: "observaciones",
