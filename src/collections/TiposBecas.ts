@@ -22,6 +22,7 @@ const TiposBeca: CollectionConfig = {
     {
       name: "imagen_fondo",
       label: "Imagen de Fondo",
+      required: true,
       type: "upload",
       relationTo: "media", // Asegúrate de tener una colección de "media" o ajusta el `relationTo` según tu configuración
       admin: {
@@ -32,6 +33,7 @@ const TiposBeca: CollectionConfig = {
       name: "color",
       label: "Color de etiqueta",
       type: "text",
+      required: true,
       admin: {
         description: "Código de color en formato hexadecimal (#RRGGBB).",
       },
@@ -40,6 +42,7 @@ const TiposBeca: CollectionConfig = {
       name: "textColor",
       label: "Color de texto",
       type: "text",
+      required: true,
       admin: {
         description: "Código de color en formato hexadecimal (#RRGGBB).",
       },
@@ -49,6 +52,7 @@ const TiposBeca: CollectionConfig = {
       label: "Icono",
       type: "upload",
       relationTo: "media",
+      required: true,
       admin: {
         description: "Icono asociado con este tipo de beca.",
       },
