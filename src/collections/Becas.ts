@@ -20,7 +20,7 @@ const departamentosUruguay = [
   "San José",
   "Soriano",
   "Tacuarembó",
-  "Treinta y Tres",
+  "Treinta y Tres"
 ];
 
 const optionsDepartamentos = departamentosUruguay.map((departamento) => ({
